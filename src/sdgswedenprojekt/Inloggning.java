@@ -13,7 +13,7 @@ import oru.inf.InfException;
  */
 public class Inloggning extends javax.swing.JFrame {
 
-    private InfDB idb;
+    private InfDB idb; //Fält för att lagra databasuppkoppling
     /**
      * Creates new form Inloggning
      */
@@ -113,8 +113,8 @@ public class Inloggning extends javax.swing.JFrame {
 
     private void btnloggainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloggainActionPerformed
         
-        String ePost = tfepost.getText();
-        String losen = tflosenord.getText();
+        String ePost = tfepost.getText(); // Lagrar lokal variabel användarens E-post
+        String losen = tflosenord.getText(); // Lagrar lokal variabel användarens lösenord
         
         try{
             String sqlFraga = "SELECT losenord FROM anstalld WHERE epost = '" + ePost + "'";
